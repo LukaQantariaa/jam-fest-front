@@ -9,9 +9,13 @@ export class HeaderComponent implements OnInit {
   logoUrl: string = '../../assets/pictures/logo-01.png';
   userIconUrl:string = '../../assets/pictures/profileIcon-01.png';
 
+  searchInputVisible: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSearchClick(){
+  }
 }

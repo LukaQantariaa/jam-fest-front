@@ -1,7 +1,11 @@
 <div class="wholeHeader">
-    <img [src]=logoUrl class="orangeBackground" width="218px" height="90px">
+    
 
-    <button mat-flat-button class="header-button"><strong>Home</strong></button>
+    <a [routerLink]="['/']">
+        <img [src]=logoUrl class="orangeBackground" width="218px" height="90px">
+        <button mat-flat-button class="header-button"><strong>Home</strong></button>
+    </a>
+    
 
     <button mat-flat-button [matMenuTriggerFor]="afterMenu" class="header-button"><strong>Category</strong></button>
     <mat-menu #afterMenu="matMenu" xPosition="after">
@@ -9,8 +13,16 @@
         <button mat-menu-item>Item 2</button>
         <button mat-menu-item>Item 3</button>
     </mat-menu>
+    
+    
+    <mat-form-field *ngIf="searchInputVisible">
+        <input matInput type="text" placeholder="search">
+    </mat-form-field>
+    <button *ngIf="searchInputVisible" style="background: transparent;">
+        <mat-icon>search</mat-icon>
+    </button>
 
-    <button mat-flat-button class="header-button"><strong>Search</strong></button>
+    <button mat-flat-button class="header-button" *ngIf="!searchInputVisible" (click)="searchInputVisible=true"><strong>Search</strong></button>
 
     <div class="rightThings"> 
         <button mat-flat-button class="header-button" [matMenuTriggerFor]="afterUser"><img [src]=userIconUrl class="userLogo" width="40px" height="40px" ></button>
