@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { ItemsComponent } from './items/items.component';
 import { FooterComponent } from './footer/footer.component';
 import { FavouritesComponent } from './favourites/favourites.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FavouritesComponent } from './favourites/favourites.component';
     HeaderComponent,
     ItemsComponent,
     FooterComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
