@@ -1,18 +1,24 @@
 <div class="wholeHeader">
     <img [src]=logoUrl class="orangeBackground" width="218px" height="90px">
 
-    <button mat-button class="btn"><strong>Home</strong></button>
+    <button mat-flat-button class="header-button"><strong>Home</strong></button>
 
-    <button mat-button [matMenuTriggerFor]="afterMenu" class="btn"><strong>Category</strong></button>
+    <button mat-flat-button [matMenuTriggerFor]="afterMenu" class="header-button"><strong>Category</strong></button>
     <mat-menu #afterMenu="matMenu" xPosition="after">
         <button mat-menu-item>Item 1</button>
         <button mat-menu-item>Item 2</button>
         <button mat-menu-item>Item 3</button>
     </mat-menu>
 
-    <button mat-button class="btn"><strong>Search</strong></button>
+    <button mat-flat-button class="header-button"><strong>Search</strong></button>
 
     <div class="rightThings"> 
-        <button mat-button class="btn"><img [src]=userIconUrl class="userLogo" width="40px" height="40px"></button>
+        <button mat-flat-button class="header-button" [matMenuTriggerFor]="afterUser"><img [src]=userIconUrl class="userLogo" width="40px" height="40px" ></button>
     </div>
 </div>
+
+<mat-menu #afterUser="matMenu" xPosition="after" style="height: 100%;">
+        <div id="user-toggle-div" style="height:100%">
+
+        </div>
+</mat-menu>
