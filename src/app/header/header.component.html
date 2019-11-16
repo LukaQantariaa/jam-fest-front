@@ -7,7 +7,7 @@
     </a>
     
     <button   mat-flat-button [matMenuTriggerFor]="afterMenu" class="header-button"><strong>Category</strong></button>
-    <mat-menu #afterMenu="matMenu" xPosition="after" *ngIf="categoryArr">
+    <mat-menu #afterMenu="matMenu" xPosition="after">
         <button mat-menu-item *ngFor="let item of categoryArr" [routerLink]="['/items', item.category_id]">{{ item.category_name }}</button>
     </mat-menu>
 
@@ -23,9 +23,29 @@
 
     <button mat-flat-button class="header-button" *ngIf="!searchInputVisible" (click)="searchInputVisible=true"><strong>Search</strong></button>
 
-    <div class="rightThings"> 
-        <button mat-flat-button class="header-button" [matMenuTriggerFor]="afterUser"><img [src]=userIconUrl class="userLogo" width="40px" height="40px" ></button>
+    <div class="rightThings" *ngIf = "true"> 
+        <button mat-flat-button class="header-button" [matMenuTriggerFor]="beforeMenu">
+            <img [src]=userIconUrl class="userLogo" width="40px" height="40px">
+        </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <button mat-menu-item class="rightButton"><strong>Log In</strong></button>
+                <button mat-menu-item class="rightButton"><strong>Sign Up</strong></button>
+            </mat-menu>
     </div>
+
+    <div class="rightThings" *ngIf = "false"> 
+            <button mat-flat-button class="header-button" [matMenuTriggerFor]="beforeMenu">
+                <img [src]=userIconUrl class="userLogo" width="40px" height="40px">
+            </button>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                    <button mat-menu-item class="rightButton"><strong>My Account</strong></button>
+                    <button mat-menu-item class="rightButton"><strong>My Items</strong></button>
+                    <button mat-menu-item class="rightButton"><strong>Messages</strong></button>
+                    <button mat-menu-item class="rightButton"><strong>Upload Item</strong></button>
+                    <button mat-menu-item class="rightButton"><strong>Settings</strong></button>
+                    <button mat-menu-item class="rightButton"><strong>Log Out</strong></button>
+                </mat-menu>
+        </div>
 </div>
 
 <mat-menu #afterUser="matMenu" xPosition="after" style="height: 100%;">
