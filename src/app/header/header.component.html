@@ -6,11 +6,12 @@
         <button mat-flat-button class="header-button"><strong>Home</strong></button>
     </a>
     
-
-    <button mat-flat-button [matMenuTriggerFor]="afterMenu" class="header-button"><strong>Category</strong></button>
+    <button   mat-flat-button [matMenuTriggerFor]="afterMenu" class="header-button"><strong>Category</strong></button>
     <mat-menu #afterMenu="matMenu" xPosition="after" *ngIf="categoryArr">
-        <button mat-menu-item *ngFor="let item of categoryArr">{{ item.category_name }}</button>
+        <button mat-menu-item *ngFor="let item of categoryArr" [routerLink]="['/items', item.category_id]">{{ item.category_name }}</button>
     </mat-menu>
+
+    
     
     
     <mat-form-field *ngIf="searchInputVisible">
