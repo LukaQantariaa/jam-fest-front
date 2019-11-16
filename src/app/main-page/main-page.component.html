@@ -21,9 +21,7 @@
   <p id="most-popular">Most Popular</p>
 
   <div id="items-div">
-    <p class="item">asdasd</p>
-    <p class="item">asdasd</p>
-    <p class="item">asdasdasd</p>
+    <app-items *ngFor="let item of favoriteItemList" [imgSrc]=item.img class="app-item"></app-items>
   </div>
 
   <p>Our Picks(Our Favorite)</p>

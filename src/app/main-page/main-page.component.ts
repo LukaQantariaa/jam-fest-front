@@ -7,6 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  favoriteItemList = [ 
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    },
+    {
+      img: '../../assets/pictures/most-popular/item1.jpg'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

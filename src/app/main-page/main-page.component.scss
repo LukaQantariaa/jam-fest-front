@@ -16,13 +16,17 @@
 #items-div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-between;
+    // justify-content: center;
+    // justify-content: space-around;
 }
 
 .item {
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
     text-align: center;
-    flex: 20%;
+    flex: 0 0 5em;
     padding: 0px;
     margin: 0px;
 }
@@ -39,4 +43,8 @@
     text-align: center;
     max-height: 500px;
     height: 500px;
+}
+
+.app-item{
+    width: 20%;
 }
