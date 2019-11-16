@@ -13,12 +13,15 @@ export class HeaderComponent implements OnInit {
 
   searchInputVisible: boolean = false;
 
+  categoryArr = [];
+
   constructor(
     private categoryService: CategoryService
   ) { }
 
   ngOnInit() {
-   this.categoryService.categoryGet().subscribe( p => {
+   this.categoryService.categoryGet().subscribe( (p:[]) => {
+     this.categoryArr = [...p];
      console.log(p)
    }, error => {
      console.log(error)
