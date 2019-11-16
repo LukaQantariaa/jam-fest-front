@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CategoryService } from '../services/category.service';
 
 @Component({
   selector: 'app-header',
@@ -12,10 +13,16 @@ export class HeaderComponent implements OnInit {
 
   searchInputVisible: boolean = false;
 
-  constructor() { }
+  constructor(
+    private categoryService: CategoryService
+  ) { }
 
   ngOnInit() {
-   
+   this.categoryService.categoryGet().subscribe( p => {
+     console.log(p)
+   }, error => {
+     console.log(error)
+   })
   }
 
   onSearchClick(){
