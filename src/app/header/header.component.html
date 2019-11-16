@@ -7,8 +7,8 @@
     </a>
     
 
-    <button mat-flat-button [matMenuTriggerFor]="afterMenu" class="header-button"><strong>Category</strong></button>
-    <mat-menu #afterMenu="matMenu" xPosition="after" *ngIf="categoryArr">
+    <button mat-flat-button [matMenuTriggerFor]="afterMenu" class="header-button" ><strong>Category</strong></button>
+    <mat-menu #afterMenu="matMenu" xPosition="after" >
         <button mat-menu-item *ngFor="let item of categoryArr">{{ item.category_name }}</button>
     </mat-menu>
     
