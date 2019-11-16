@@ -18,17 +18,15 @@
   </div>
   
 
-  <p id="most-popular">Most Popular</p>
+  <h1 id="most-popular" align="center"><strong>Most Popular</strong></h1>
 
   <div id="items-div">
-    <p class="item">asdasd</p>
-    <p class="item">asdasd</p>
-    <p class="item">asdasdasd</p>
+    <app-items *ngFor="let item of favoriteItemList" [imgSrc]=item.img class="app-item"></app-items>
   </div>
 
-  <h1 id="favoritesH1" align="center"><strong>Our Favorites</strong></h1>
+  <h1 align="center"><strong>Our Favorites</strong></h1>
 
-<div id="secondary-slider-wrapper">
+<div class="secondary-slider-wrapper" id="secondCarousel">
     <div id="carouselExampleControls" class="carousel slide secondary-slider" data-ride="carousel">
         <div class="carousel-inner">
         <div class="carousel-item active">

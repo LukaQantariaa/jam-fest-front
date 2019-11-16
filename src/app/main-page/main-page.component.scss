@@ -18,22 +18,27 @@
 #items-div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-between;
+    // justify-content: center;
+    // justify-content: space-around;
 }
 
 .item {
+    width: 100px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
     text-align: center;
-    flex: 20%;
+    flex: 0 0 5em;
     padding: 0px;
     margin: 0px;
 }
 
 .secondary-slider-wrapper {
-    width: 100%;
     text-align: center;
-    max-height: 500px;
-    height: 500px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .secondary-slider {
@@ -43,6 +48,18 @@
     height: 500px;
 }
 
-#favoritesH1 {
-    align-self: center;
+.app-item{
+    width: 20%;
+}
+
+.carousel-control-prev {
+    margin-top: 30%;
+}
+
+.carousel-control-next {
+    margin-top: 30%;
+}
+
+#secondCarousel {
+    // width: 100%;
 }
