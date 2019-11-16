@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoryPageComponent } from './category-page/category-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     ItemsComponent,
     FooterComponent,
     FavouritesComponent,
-    MainPageComponent
+    MainPageComponent,
+    CategoryPageComponent
   ],
   imports: [
     BrowserModule,
