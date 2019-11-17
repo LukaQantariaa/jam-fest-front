@@ -15,7 +15,7 @@
     <mat-form-field *ngIf="searchInputVisible">
         <input matInput type="text" placeholder="search">
     </mat-form-field>
-    <button *ngIf="searchInputVisible" style="background: transparent;">
+    <button *ngIf="searchInputVisible" style="background: transparent;" (click)="searchClicked()">
         <mat-icon>search</mat-icon>
     </button>
 

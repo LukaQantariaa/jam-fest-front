@@ -28,6 +28,7 @@ export class HeaderComponent implements OnInit {
    })
   }
 
-  onSearchClick(){
+  searchClicked(){
+    this.searchInputVisible = false;
   }
 }
