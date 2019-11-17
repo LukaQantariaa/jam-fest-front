@@ -48,8 +48,11 @@ export class HeaderComponent implements OnInit {
     });
     loginDialogRef.afterClosed().subscribe(result => {
       console.log(result)
-      let params = result;
-      params.password = 'paroli';
+      let params = {
+        username: result
+      };
+      params["password"] = 'paroli';
+      console.log(params)
       this.loginService.loginPost(params).subscribe( (p: any) => {
         this.userProfileService.username = p.info[0].username;
         this.userProfileService.userSignedIn = true;

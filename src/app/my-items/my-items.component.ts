@@ -18,11 +18,15 @@ export class MyItemsComponent implements OnInit {
     private addDialog: MatDialog,
     private userProfileService: UserProfileService
   ) { }
-
+  
   ngOnInit() {
-    this.itemsService.itemsPost({}).subscribe( (p: []) => {
-      this.myItemsArr = [...p];
+    this.itemsService.itemsPost({}).subscribe( (p: any[]) => {
+      this.myItemsArr = p.filter(p => {
+        return p.user_id == this.userProfileService.userId;
+      })
       console.log(p);
+      console.log(this.userProfileService.userId)
+      console.log(this.myItemsArr);
     }, error => {
       console.log(error)
     });
