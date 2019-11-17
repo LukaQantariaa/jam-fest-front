@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
       this.loginService.loginPost(params).subscribe( (p: any) => {
         this.userProfileService.username = p.info[0].username;
         this.userProfileService.userSignedIn = true;
-        this.userProfileService.userId = p.info.user_id;
+        this.userProfileService.userId = p.info[0].user_id;
       }, error => {
         console.log(error);
         this.userProfileService.userSignedIn = false;
