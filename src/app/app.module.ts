@@ -13,6 +13,9 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryPageComponent } from './category-page/category-page.component';
+import { LoginDialogComponent } from './header/login.dialog/login.dialog.component';
+import { RegisterDialogComponent } from './header/register.dialog/register.dialog.component';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,16 +25,24 @@ import { CategoryPageComponent } from './category-page/category-page.component';
     FooterComponent,
     FavouritesComponent,
     MainPageComponent,
-    CategoryPageComponent
+    CategoryPageComponent,
+    LoginDialogComponent,
+    RegisterDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    LoginDialogComponent,
+    RegisterDialogComponent
+  ]
 })
 export class AppModule { }

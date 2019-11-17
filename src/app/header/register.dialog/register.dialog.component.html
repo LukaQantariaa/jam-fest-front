@@ -1,0 +1,14 @@
+<form [formGroup]="loginForm">
+    <mat-form-field>
+        <input matInput type="text" formControlName="username" placeholder="username">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" formControlName="username" placeholder="password">
+    </mat-form-field>
+
+    <p class="invalid-form" *ngIf="loginForm.invalid && submitClicked">*both input should be filled</p>
+    <div id="buttons">
+        <button mat-button color="primary" (click)="onSubmitClick()">Submit</button>
+        <button mat-button (click)="onCancelClick()">Cancel</button>
+    </div>
+</form>

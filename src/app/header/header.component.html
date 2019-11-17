@@ -26,8 +26,8 @@
             <img [src]=userIconUrl class="userLogo" width="40px" height="40px">
         </button>
             <mat-menu #beforeMenu="matMenu" xPosition="before">
-                <button mat-menu-item class="rightButton"><strong>Log In</strong></button>
-                <button mat-menu-item class="rightButton"><strong>Sign Up</strong></button>
+                <button mat-menu-item class="rightButton" (click)="onLoginClick()"><strong>Log In</strong></button>
+                <button mat-menu-item class="rightButton" (click)="onSignupClick()"><strong>Sign Up</strong></button>
             </mat-menu>
     </div>
 
