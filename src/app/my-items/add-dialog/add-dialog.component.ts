@@ -10,7 +10,7 @@ import { DetectService } from 'src/app/services/detect.service';
   styleUrls: ['./add-dialog.component.scss']
 })
 export class AddDialogComponent implements OnInit {
-
+  desc_var :string ="";
   addForm: FormGroup;
   imageToChange: File;
   categoryArr = [];
@@ -47,6 +47,13 @@ export class AddDialogComponent implements OnInit {
     reader.onload = (_event) => { 
       console.log(reader.result)
       this.imgURL = reader.result; 
+      this.detectService.detectPost({'url':files[0].name}).subscribe(p=>{
+        console.log(p);
+        this.desc_var = p.category1+" , "+p.category2 + " , " + p.category3;;
+      }, error=>{
+        console.log(error);
+      }
+      );
     }
     
   }
