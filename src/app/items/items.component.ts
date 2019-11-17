@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ItemsComponent implements OnInit {
 
-  @Input() imgSrc: string;
+  @Input() params;
 
   constructor() { }
 
