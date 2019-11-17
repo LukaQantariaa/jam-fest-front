@@ -1,4 +1,8 @@
-<form [formGroup]="addForm" enctype="multipart/form-data">
+<form [formGroup]="loginForm" enctype="multipart/form-data">
+
+        <input type="file" (change)="onFileChange($event.target.files)">
+
+        <img [src]="imgURL" height="200" *ngIf="imgURL">
         <mat-form-field>
             <input matInput type="text" formControlName="itemName" placeholder="item name">
         </mat-form-field>
@@ -6,7 +10,6 @@
             <textarea style="width: 100%;" matInput placeholder="item description" formControlName="itemDescription"></textarea>
         </mat-form-field>
 
-        <input type="file" (change)="onFileChange($event.target.files)">
 
         <mat-form-field>
         <mat-label>Item Category</mat-label>
