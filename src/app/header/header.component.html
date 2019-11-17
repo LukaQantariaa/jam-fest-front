@@ -32,6 +32,7 @@
     </div>
 
     <div class="rightThings" *ngIf = "userProfileService.userSignedIn"> 
+            <h4 style="float:left; margin-top: 7%">{{userProfileService.username}}</h4>
             <button mat-flat-button class="header-button" [matMenuTriggerFor]="beforeMenu">
                 <img [src]=userIconUrl class="userLogo" width="40px" height="40px">
             </button>
