@@ -16,6 +16,8 @@ import { CategoryPageComponent } from './category-page/category-page.component';
 import { LoginDialogComponent } from './header/login.dialog/login.dialog.component';
 import { RegisterDialogComponent } from './header/register.dialog/register.dialog.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MyItemsComponent } from './my-items/my-items.component';
+import { AddDialogComponent } from './my-items/add-dialog/add-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     MainPageComponent,
     CategoryPageComponent,
     LoginDialogComponent,
-    RegisterDialogComponent
+    RegisterDialogComponent,
+    MyItemsComponent,
+    AddDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
   bootstrap: [AppComponent],
   entryComponents: [
     LoginDialogComponent,
-    RegisterDialogComponent
+    RegisterDialogComponent,
+    AddDialogComponent
   ]
 })
 export class AppModule { }
