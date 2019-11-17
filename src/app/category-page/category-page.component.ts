@@ -13,21 +13,19 @@ export class CategoryPageComponent implements OnInit {
 
 
   constructor(
-    private items: ItemsService,
-    private router: Router
+    private items: ItemsService
   ) { }
 
   ngOnInit() {
-    this.router.events.subscribe( val => {
-      let res = window.location.href.split("/");
-      let id = res[res.length-1];
-      this.items.itemsPost({category:id}).subscribe( (p: []) => {
-        this.itemsArr = [...p];
-        console.log(this.itemsArr);
-      }, (error) => {
-        console.log(error);
-      })
+    let res = window.location.href.split("/");
+    let id = res[res.length-1];
+    this.items.itemsPost({category: id.toString()}).subscribe( (p: []) => {
+      this.itemsArr = [...p];
+      console.log(this.itemsArr);
+    }, (error) => {
+      console.log(error);
     })
   }
+  
 
 }
