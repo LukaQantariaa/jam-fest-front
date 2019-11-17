@@ -6,7 +6,7 @@
         <input matInput type="password" formControlName="username" placeholder="password">
     </mat-form-field>
 
-    <p class="invalid-form" *ngIf="loginForm.invalid && submitClicked">*both input should be filled</p>
+    <p class="invalid-form" *ngIf="loginForm.invalid && submitClicked">*invalid username</p>
     <div id="buttons">
         <button mat-button color="primary" (click)="onSubmitClick()">Submit</button>
         <button mat-button (click)="onCancelClick()">Cancel</button>

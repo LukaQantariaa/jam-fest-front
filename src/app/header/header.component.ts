@@ -4,6 +4,8 @@ import { CategoryService } from '../services/category.service';
 import { MatDialog } from '@angular/material';
 import { LoginDialogComponent } from './login.dialog/login.dialog.component';
 import { RegisterDialogComponent } from './register.dialog/register.dialog.component';
+import { LoginService } from '../services/login.service';
+import { UserProfileService } from '../services/user-profile.service';
 
 @Component({
   selector: 'app-header',
@@ -21,7 +23,9 @@ export class HeaderComponent implements OnInit {
   constructor(
     private categoryService: CategoryService,
     private loginDialog: MatDialog,
-    private registerDialog: MatDialog
+    private registerDialog: MatDialog,
+    private loginService: LoginService,
+    private userProfileService: UserProfileService
   ) { }
 
   ngOnInit() {
@@ -43,7 +47,16 @@ export class HeaderComponent implements OnInit {
       height: ''
     });
     loginDialogRef.afterClosed().subscribe(result => {
-      console.log(result);
+      let params = result;
+      params.password = 'paroli';
+      this.loginService.loginPost(params).subscribe( (p: any) => {
+        this.userProfileService.userSignedIn = true;
+        this.userProfileService.userId = p.info.user_id;
+      }, error => {
+        console.log(error);
+        this.userProfileService.userSignedIn = false;
+        this.userProfileService.userId = -1;
+      });
     })
   }
 
@@ -57,4 +70,10 @@ export class HeaderComponent implements OnInit {
       console.log(result);
     })
   }
+
+  onLogOut(){
+    this.userProfileService.userSignedIn = false;
+    this.userProfileService.userId = -1;
+  }
+
 }

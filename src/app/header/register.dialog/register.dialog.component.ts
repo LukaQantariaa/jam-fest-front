@@ -21,15 +21,13 @@ export class RegisterDialogComponent implements OnInit {
   ngOnInit() {
     this.loginForm = new FormGroup({
       username: new FormControl(null, Validators.required),
-      password: new FormControl('', Validators.required)
+      password: new FormControl(null)
     })
   }
 
   onSubmitClick(){
-    console.log(this.loginForm)
     this.submitClicked = true;
     if(this.loginForm.invalid) return;
-    console.log(this.loginForm);
     this.loginDialogRef.close(this.loginForm.value);
   }
 
