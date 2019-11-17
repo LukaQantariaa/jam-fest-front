@@ -9,3 +9,38 @@ input {
 #buttons {
     float: right;
 }
+
+$input-file-color: grey;
+$input-file-hover-color: black;
+
+input[type=file] {
+  outline: 0;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.label {
+  margin-left: 37%;
+  width: 120px;
+  height: 50px;
+  border: 2px dashed $input-file-color;
+  border-radius: 5px;
+  padding-top: 1%;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  .title {
+    color: $input-file-color;
+    transition: 200ms color;
+  }
+  
+  &:hover {
+    border: 2px solid $input-file-hover-color;
+    
+    i,
+    .title {
+     color: $input-file-hover-color; 
+    }
+  }
+}

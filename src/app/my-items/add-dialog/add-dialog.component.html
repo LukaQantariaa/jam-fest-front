@@ -1,6 +1,9 @@
 <form [formGroup]="addForm" enctype="multipart/form-data">
-
-        <input type="file" (change)="onFileChange($event.target.files)" formControlName="itemImage">
+        <label class="label">
+            <span class="title">Pick an Image</span>
+            <input type="file" (change)="onFileChange($event.target.files)" formControlName="itemImage">
+        </label>
+    
 
         <img [src]="imgURL" height="200" *ngIf="imgURL">
         <mat-form-field>
