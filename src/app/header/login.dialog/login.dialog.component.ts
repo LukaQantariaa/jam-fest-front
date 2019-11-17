@@ -28,7 +28,7 @@ export class LoginDialogComponent implements OnInit {
   onSubmitClick(){
     this.submitClicked = true;
     if(this.loginForm.invalid) return;
-    this.loginDialogRef.close(this.loginForm.value);
+    this.loginDialogRef.close(this.loginForm.value.username);
   }
 
   onCancelClick(){

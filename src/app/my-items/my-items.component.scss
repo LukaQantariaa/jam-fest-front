@@ -1,0 +1,12 @@
+.wrapper-div {
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 100%;
+    margin-top: 100px;
+}
+
+.card-div {
+    width: 24%;
+    display: inline-table;
+    margin-right: 5px;
+}
