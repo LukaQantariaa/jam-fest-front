@@ -13,6 +13,7 @@ export class AddDialogComponent implements OnInit {
   addForm: FormGroup;
   imageToChange: File;
   categoryArr = [];
+  imgURL;
 
   constructor(
     public addDialogRef: MatDialogRef<AddDialogComponent>,
@@ -36,8 +37,13 @@ export class AddDialogComponent implements OnInit {
     });
   }
 
-  onFileChange(file) {
-    this.imageToChange = file[0];
+  onFileChange(files) {
+    this.imageToChange = files[0];
+    var reader = new FileReader();
+    reader.readAsDataURL(files[0]); 
+    reader.onload = (_event) => { 
+      this.imgURL = reader.result; 
+    }
   }
 
   onSubmitClick() {
