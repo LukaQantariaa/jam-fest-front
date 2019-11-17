@@ -2,10 +2,11 @@
     display: flex; 
     flex-wrap: wrap; 
     width: 100%;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .card-div {
+    height: 300px;
     width: 24%;
     display: inline-table;
     margin-right: 5px;

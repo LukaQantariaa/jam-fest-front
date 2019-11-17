@@ -48,4 +48,8 @@ export class MyItemsComponent implements OnInit {
     })
   }
 
+  onOffer(index){
+    console.log(index)
+  }
+
 }

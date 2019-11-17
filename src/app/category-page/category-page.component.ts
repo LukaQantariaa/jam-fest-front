@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemsService } from '../services/items.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { OfferDialogComponent } from './offer-dialog/offer-dialog.component';
 
 @Component({
   selector: 'app-category-page',
@@ -13,7 +15,8 @@ export class CategoryPageComponent implements OnInit {
 
 
   constructor(
-    private items: ItemsService
+    private items: ItemsService,
+    private offerDialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -27,5 +30,19 @@ export class CategoryPageComponent implements OnInit {
     })
   }
   
+  onOfferClick(index: number){
+    console.log(index)
+    const offerDialogRef = this.offerDialog.open(OfferDialogComponent, {
+      width: '400px',
+      height: '',
+      data: {id: index}
+    });
+
+    offerDialogRef.afterClosed().subscribe(result => {
+
+      console.log(result);
+      
+    })
+  }
 
 }

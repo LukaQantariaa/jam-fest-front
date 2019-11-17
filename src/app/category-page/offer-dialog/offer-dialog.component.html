@@ -1,0 +1,5 @@
+<mat-checkbox *ngFor="let item of myItemsArr; let i = index" style="display: flex;" (change)="checkBoxValues[i] = !checkBoxValues[i]">{{item.item_name}}</mat-checkbox>
+<div style="display: flex;">
+    <button mat-flat-button color="primary" (click)=offerClicked()>Offer</button>
+    <button mat-flat-button (click)=cancelClicked()>Cancel</button>
+</div>

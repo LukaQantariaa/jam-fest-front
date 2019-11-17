@@ -1,6 +1,6 @@
  <div class="wrapper-div"> 
     <div *ngIf="itemsArr.length!=0" >  
-        <mat-card class="example-card"  *ngFor="let item of itemsArr" class="card-div">
+        <mat-card class="example-card"  *ngFor="let item of itemsArr; let i = index" class="card-div">
             <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>{{item.item_name}}</mat-card-title>
@@ -8,23 +8,13 @@
             <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
             <mat-card-content>
             <p>
-                {{item.item_description}}
+                {{(item.item_description).substr(0, 25)}}
             </p>
             </mat-card-content>
+            <mat-card-actions>
+                <button mat-button (click)="onOfferClick(i)" color="primary">Offer an Item</button>
+            </mat-card-actions>
         </mat-card>
     </div>
-    <div *ngIf="itemsArr.length!=0" >  
-            <mat-card class="example-card"  *ngFor="let item of itemsArr" class="card-div">
-                <mat-card-header>
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>{{item.item_name}}</mat-card-title>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                <p>
-                    {{item.item_description}}
-                </p>
-                </mat-card-content>
-            </mat-card>
-        </div>
+    
 </div>

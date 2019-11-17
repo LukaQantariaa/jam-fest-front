@@ -19,6 +19,7 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyItemsComponent } from './my-items/my-items.component';
 import { AddDialogComponent } from './my-items/add-dialog/add-dialog.component';
 import { MessagesComponent } from './messages/messages.component';
+import { OfferDialogComponent } from './category-page/offer-dialog/offer-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MessagesComponent } from './messages/messages.component';
     RegisterDialogComponent,
     MyItemsComponent,
     AddDialogComponent,
-    MessagesComponent
+    MessagesComponent,
+    OfferDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { MessagesComponent } from './messages/messages.component';
   entryComponents: [
     LoginDialogComponent,
     RegisterDialogComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    OfferDialogComponent
   ]
 })
 export class AppModule { }
