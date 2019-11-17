@@ -13,8 +13,8 @@
 .slider-image-2 {
     max-width:100%;
     max-height:100%;
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    height: 950px;
 }
 
 #most-popular {
@@ -55,9 +55,10 @@
 
 .secondary-slider {
     width: 100%;
-    text-align: center;
-    max-height: 500px;
-    height: 500px;
+    max-height: 950px;
+    width: 1562px;
+    height: 800px;
+    margin-right: -100px;
 }
 
 .app-item{
@@ -73,9 +74,9 @@
 }
 
 #secondCarousel {
-    margin-left: 15%;
+    margin-right: -15%;
     display: inline-table;
     width: 70%;
-    margin-top: 4%;
+    margin-top: 1%;
     // width: 100%;
 }
