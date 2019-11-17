@@ -18,6 +18,7 @@ import { RegisterDialogComponent } from './header/register.dialog/register.dialo
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyItemsComponent } from './my-items/my-items.component';
 import { AddDialogComponent } from './my-items/add-dialog/add-dialog.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddDialogComponent } from './my-items/add-dialog/add-dialog.component';
     LoginDialogComponent,
     RegisterDialogComponent,
     MyItemsComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

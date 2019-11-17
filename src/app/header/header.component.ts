@@ -57,7 +57,6 @@ export class HeaderComponent implements OnInit {
         this.userProfileService.username = p.info[0].username;
         this.userProfileService.userSignedIn = true;
         this.userProfileService.userId = p.info[0].user_id;
-        console.log(this.userProfileService.userId)
       }, error => {
         console.log(error);
         this.userProfileService.userSignedIn = false;
