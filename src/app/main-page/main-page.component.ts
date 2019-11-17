@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-
+  logoUrl: string = '../../assets/pictures/images/11-01.jpg';
+  logoUrl1:string = '../../assets/pictures/images/222-01.jpg';
+  logoUrl2:string = '../../assets/pictures/images/333-01.jpg';
   favoriteItemList = [ 
     {
       imgSrc: '../../assets/pictures/most-popular/item0.jpg',
