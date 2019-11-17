@@ -1,9 +1,9 @@
 <form [formGroup]="loginForm">
     <mat-form-field>
-        <input matInput type="text" formControlName="username" placeholder="username">
+        <input matInput type="text" formControlName="username" placeholder="Username">
     </mat-form-field>
     <mat-form-field>
-        <input matInput type="password" formControlName="password" placeholder="password">
+        <input matInput type="password" formControlName="password" placeholder="Password">
     </mat-form-field>
     <p class="invalid-form" *ngIf="loginForm.invalid && submitClicked">*invalid username</p>
     <div id="buttons">

@@ -18,10 +18,13 @@
 }
 
 #most-popular {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 60pt;
+    margin-top: 1.5% ;
+    font-size: 300%;
     // font-family: mollen pe;
+}
+
+#popular-div {
+    height: 10%;
 }
 
 #items-div {
@@ -70,5 +73,6 @@
 }
 
 #secondCarousel {
+    margin-top: 2.5%;
     // width: 100%;
 }

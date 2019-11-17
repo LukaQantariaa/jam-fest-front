@@ -10,7 +10,6 @@ import { UserProfileService } from '../services/user-profile.service';
 export class MessagesComponent implements OnInit {
 
   messagesArr = [];
-
   constructor(
     private requestsService: RequestsService,
     private userProfileService: UserProfileService

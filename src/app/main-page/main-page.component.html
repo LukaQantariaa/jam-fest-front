@@ -17,14 +17,14 @@
     </div>
   </div>
   
-
-  <h1 id="most-popular" align="center" style="margin-top: 5px"><strong>MOST POPULAR</strong></h1>
-
+<div id="popular-div">
+  <h1 id="most-popular" align="center"><strong>MOST POPULAR</strong></h1>
+</div>
   <div id="items-div">
     <app-items *ngFor="let item of favoriteItemList" [params]=item class="app-item"></app-items>
   </div>
 
-  <h1 align="center"><strong>Our Favorites</strong></h1>
+  <h1 align="center" style="margin-top: 1%; margin-bottom: -20px"><strong>Our Favorites</strong></h1>
 
 <div class="secondary-slider-wrapper" id="secondCarousel">
     <div id="carouselExampleControls" class="carousel slide secondary-slider" data-ride="carousel">

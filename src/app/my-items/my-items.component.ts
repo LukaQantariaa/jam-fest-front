@@ -18,7 +18,7 @@ export class MyItemsComponent implements OnInit {
     private addDialog: MatDialog,
     private userProfileService: UserProfileService
   ) { }
-  
+
   ngOnInit() {
     this.itemsService.itemsPost({}).subscribe( (p: any[]) => {
       this.myItemsArr = p.filter(p => {
@@ -39,6 +39,7 @@ export class MyItemsComponent implements OnInit {
     });
 
     addDialogRef.afterClosed().subscribe(result => {
+      if(!result) return;
       if(!this.userProfileService.userSignedIn) return;
 
       console.log(result);

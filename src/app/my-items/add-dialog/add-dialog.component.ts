@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { CategoryService } from 'src/app/services/category.service';
+import { DetectService } from 'src/app/services/detect.service';
 
 @Component({
   selector: 'app-add-dialog',
@@ -18,7 +19,8 @@ export class AddDialogComponent implements OnInit {
   constructor(
     public addDialogRef: MatDialogRef<AddDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data,
-      private categoryService: CategoryService
+      private categoryService: CategoryService,
+      private detectService: DetectService
     ) {}
 
   ngOnInit() {
@@ -38,16 +40,21 @@ export class AddDialogComponent implements OnInit {
   }
 
   onFileChange(files) {
+    console.log(files);
     this.imageToChange = files[0];
     var reader = new FileReader();
     reader.readAsDataURL(files[0]); 
     reader.onload = (_event) => { 
+      console.log(reader.result)
       this.imgURL = reader.result; 
     }
+    
   }
 
   onSubmitClick() {
-
+    console.log(this.addForm.value)
+    console.log(this.imageToChange)
+    console.log(this.addForm.value)
     let obj = {
       item_name: this.addForm.value.itemName,
       item_description: this.addForm.value.itemDescription,
