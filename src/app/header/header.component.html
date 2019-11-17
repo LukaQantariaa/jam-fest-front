@@ -37,8 +37,7 @@
                 <img [src]=userIconUrl class="userLogo" width="40px" height="40px">
             </button>
                 <mat-menu #beforeMenu="matMenu" xPosition="before">
-                    <button mat-menu-item class="rightButton"><strong>My Account</strong></button>
-                    <button mat-menu-item class="rightButton"><strong>My Items</strong></button>
+                    <button mat-menu-item class="rightButton" [routerLink]="['/my-items']"><strong>My Items</strong></button>
                     <button mat-menu-item class="rightButton"><strong>Messages</strong></button>
                     <button mat-menu-item class="rightButton"><strong>Upload Item</strong></button>
                     <button mat-menu-item class="rightButton"><strong>Settings</strong></button>

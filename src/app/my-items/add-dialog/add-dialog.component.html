@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm" enctype="multipart/form-data">
+        <mat-form-field>
+            <input matInput type="text" formControlName="itemName" placeholder="item name">
+        </mat-form-field>
+        <mat-form-field>
+            <textarea style="width: 100%;" matInput placeholder="item description" formControlName="itemDescription"></textarea>
+        </mat-form-field>
+
+        <input type="file" (change)="onFileChange($event.target.files)">
+
+        <mat-form-field>
+        <mat-label>Item Category</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let item of categoryArr" [value]="item.category_name">
+            {{item.category_name}}
+            </mat-option>
+        </mat-select>
+        </mat-form-field>
+    
+        <div id="buttons">
+            <button mat-button color="primary" (click)="onSubmitClick()">Submit</button>
+            <button mat-button (click)="onCancelClick()">Cancel</button>
+        </div>
+    </form>
