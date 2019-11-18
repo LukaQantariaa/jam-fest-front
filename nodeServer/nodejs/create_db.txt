@@ -1,0 +1,51 @@
+use gundavri;
+
+create table if not exists categories (
+	category_id int auto_increment primary key   , 
+    category_name varchar(255)
+);
+
+create table if not exists packs (
+	request_id int , 
+    item_id int 
+);
+create table if not exists binary_requests(
+	from_user_id int , 
+    from_user_item_id int , 
+    to_user_id  int , 
+    to_user_item_id int 
+);
+insert into binary_requests (from_user_id , from_user_item_id , to_user_id , to_user_item_id) values (1,1,2,2);
+insert into binary_requests (from_user_id , from_user_item_id , to_user_id , to_user_item_id) values (2,2,1,1);
+insert into binary_requests (from_user_id , from_user_item_id , to_user_id , to_user_item_id) values (1,1,3,3);
+insert into binary_requests (from_user_id , from_user_item_id , to_user_id , to_user_item_id) values (3,3,2,2);
+create table if not exists requests (
+	req_id int auto_increment  primary key  ,
+	from_user_id int , 
+    to_user_id int , 
+    to_user_item_id int 
+);
+select * from binary_requests;
+delete from binary_requests where to_user_id = 3;
+
+create table if not exists users(
+	user_id int auto_increment primary key  , 
+    username varchar(255) , 
+    password_ varchar(255) 
+    
+);
+create table if not exists category_packs (
+	cp_id  int , 
+    c_id int 
+);
+create table if not exists items (
+	item_id int auto_increment primary key  , 
+    user_id int  , 
+    item_name varchar(255)  , 
+    item_url varchar(255) , 
+    category_id int  , 
+    item_description varchar(255)
+);
+
+
+
